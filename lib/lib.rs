@@ -1,8 +1,8 @@
 /*
  * File:    lib.rs
- * Brief:   TODO
+ * Brief:   sv-bindings: Raw FFI bindings for the (System)Verilog DPI, PLI, and VPI interfaces (IEEE 1800).
  *
- * Copyright (C) TODO John Jekel
+ * Copyright (C) 2023 John Jekel
  * See the LICENSE file at the root of the project for licensing info.
  *
  * TODO longer description
@@ -10,7 +10,11 @@
 */
 
 /*!
- * TODO rustdoc for this file here
+ * sv-bindings: Raw FFI bindings for the (System)Verilog DPI, PLI, and VPI interfaces (IEEE 1800).
+ *
+ * If you wish to use sv-bindings, add it as a dependency!
+ *
+ * TODO better documentation
 */
 
 #![allow(non_upper_case_globals)]
@@ -18,44 +22,28 @@
 #![allow(non_snake_case)]
 
 /* ------------------------------------------------------------------------------------------------
+ * Includes
+ * --------------------------------------------------------------------------------------------- */
+
+/*
+include!(concat!(env!("OUT_DIR"), "/svdpi.rs"));
+include!(concat!(env!("OUT_DIR"), "/vpi_user.rs"));
+include!(concat!(env!("OUT_DIR"), "/vpi_compatibility.rs"));
+include!(concat!(env!("OUT_DIR"), "/sv_vpi_user.rs"));
+*/
+include!(concat!(env!("OUT_DIR"), "/wrapper.rs"));//Switching to a wrapper to make life easier
+
+/* ------------------------------------------------------------------------------------------------
  * Submodules
  * --------------------------------------------------------------------------------------------- */
 
-#[cfg(feature = "svdpi")]
-mod svdpi {
-    include!(concat!(env!("OUT_DIR"), "/svdpi.rs"));
-}
-
-#[cfg(feature = "vpi_user")]
-mod vpi_user {
-    include!(concat!(env!("OUT_DIR"), "/vpi_user.rs"));
-}
-
-#[cfg(feature = "vpi_compatibility")]
-mod vpi_compatibility {
-    include!(concat!(env!("OUT_DIR"), "/vpi_compatibility.rs"));
-}
-
-#[cfg(feature = "sv_vpi_user")]
-mod sv_vpi_user {
-    include!(concat!(env!("OUT_DIR"), "/sv_vpi_user.rs"));
-}
+//TODO
 
 /* ------------------------------------------------------------------------------------------------
  * Uses
  * --------------------------------------------------------------------------------------------- */
 
-#[cfg(feature = "svdpi")]
-pub use svdpi::*;
-
-#[cfg(feature = "vpi_user")]
-pub use vpi_user::*;
-
-#[cfg(feature = "vpi_compatibility")]
-pub use vpi_compatibility::*;
-
-#[cfg(feature = "sv_vpi_user")]
-pub use sv_vpi_user::*;
+//TODO
 
 /* ------------------------------------------------------------------------------------------------
  * Macros

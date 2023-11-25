@@ -1,7 +1,7 @@
 [package]
 name = "sv-bindings"
-version = "0.1.0"
-description = "Raw FFI bindings for the SystemVerilog DPI, PLI, and VPI interfaces (IEEE 1800)."
+version = "0.1.1"
+description = "Raw FFI bindings for the (System)Verilog DPI, PLI, and VPI interfaces (IEEE 1800)."
 authors = ["John Zacarias Jekel <john@jekel.ca>"]
 readme = "README.md"
 #homepage = ""
@@ -14,13 +14,7 @@ keywords = ["verilog", "systemverilog", "dpi", "vpi", "bindings"]
 #documentation = ""
 
 [features]
-default = ["svdpi", "vpi_user", "vpi_compatibility", "sv_vpi_user"]
-
-#Raw bindings
-svdpi = []
-vpi_user = []
-vpi_compatibility = []
-sv_vpi_user = []
+default = []
 
 [build-dependencies]
 bindgen = "0.69.1"

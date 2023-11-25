@@ -1,8 +1,8 @@
 /*
  * File:    build.rs
- * Brief:   TODO
+ * Brief:   Build script for the sv-bindings crate
  *
- * Copyright (C) TODO John Jekel
+ * Copyright (C) 2023 John Jekel
  * See the LICENSE file at the root of the project for licensing info.
  *
  * TODO longer description
@@ -38,14 +38,11 @@
  * --------------------------------------------------------------------------------------------- */
 
 const HEADERS_TO_BINDINGS: &[(&str, &str)] = &[
-    #[cfg(feature = "svdpi")]
-    ("include/svdpi.h", "svdpi.rs"),
-    #[cfg(feature = "vpi_user")]
-    ("include/vpi_user.h", "vpi_user.rs"),
-    #[cfg(feature = "vpi_compatibility")]
-    ("include/vpi_compatibility.h", "vpi_compatibility.rs"),
-    #[cfg(feature = "sv_vpi_user")]
-    ("include/sv_vpi_user.h", "sv_vpi_user.rs"),
+    //("include/svdpi.h", "svdpi.rs"),
+    //("include/vpi_user.h", "vpi_user.rs"),
+    //("include/vpi_compatibility.h", "vpi_compatibility.rs"),
+    //("include/sv_vpi_user.h", "sv_vpi_user.rs"),
+    ("include/wrapper.h", "wrapper.rs")//Switching to a wrapper to make life easier
 ];
 
 /* ------------------------------------------------------------------------------------------------
