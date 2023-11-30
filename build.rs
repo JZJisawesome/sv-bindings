@@ -93,6 +93,7 @@ fn setup_bindings(c_header: &str, rust_output: &str) {
     let bindings = bindgen::Builder::default()
         .header(c_header)
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
+        .default_macro_constant_type(bindgen::MacroTypeVariation::Signed)
         .generate()
         .expect("Unable to generate bindings");
 

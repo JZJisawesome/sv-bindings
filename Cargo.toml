@@ -1,6 +1,6 @@
 [package]
 name = "sv-bindings"
-version = "0.1.1"
+version = "0.1.2"
 description = "Raw FFI bindings for the (System)Verilog DPI, PLI, and VPI interfaces (IEEE 1800)."
 authors = ["John Zacarias Jekel <john@jekel.ca>"]
 readme = "README.md"
